@@ -1,0 +1,50 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "libraryName",
+        "type": "string"
+      }
+    ],
+    "name": "readLibrary",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "lib",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "libraryName",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startChunk",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "endChunk",
+        "type": "uint256"
+      }
+    ],
+    "name": "readLibraryBetweenChunks",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "lib",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
