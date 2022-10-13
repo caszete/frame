@@ -1,0 +1,39 @@
+{
+  "name": "@divergencetech/ethier",
+  "version": "0.37.0",
+  "description": "Golang and Solidity SDK to make Ethereum development ethier",
+  "main": "\"\"",
+  "scripts": {
+    "build": "go build -o build/ethier ethier/*.go",
+    "generate": "PATH=\"$(readlink -f build):${PATH}\" go generate ./...",
+    "solhint": "solhint -w 0 '**/*.sol'",
+    "test": "PATH=\"$(readlink -f build):${PATH}\" go generate ./... && go test ./...",
+    "test:light": "go test ./...",
+    "test:verbose": "PATH=\"$(readlink -f build):${PATH}\" go generate ./... && go test ./... -test.v",
+    "lint:go": "golint ./... 2>&1 | tee /dev/stderr | xargs -0 test -z",
+    "lint:sol": "npm run solhint",
+    "lint": "npm run lint:sol && npm run lint:go",
+    "fmt:go": "gofmt -e -d . 2>&1  | tee /dev/stderr | xargs -0 test -z",
+    "fmt:sol": "npx prettier '**/*.sol' --check",
+    "fmt": "npm run fmt:sol && npm run fmt:go"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/divergencetech/ethier"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@chainlink/contracts": "^0.3.0",
+    "@openzeppelin/contracts": "4.7.3",
+    "@openzeppelin/contracts-upgradeable": "4.7.3",
+    "erc721a": "4.2.2"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "solhint": "^3.3.7"
+  }
+}

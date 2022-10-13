@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.9;
 
-import {ERC721A} from "erc721a/contracts/ERC721A.sol";
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
-import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {IERC2981, IERC165} from "@openzeppelin/contracts/interfaces/IERC2981.sol";
+import {ERC721A} from "../lib/erc721a/contracts/ERC721A.sol";
+import {Ownable} from "../lib/openzeppelin-contracts/contracts/access/Ownable.sol";
+import {IERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
+import {IERC2981, IERC165} from "../lib/openzeppelin-contracts/contracts/interfaces/IERC2981.sol";
 import {IRenderer} from "./IRenderer.sol";
 
 /// @author frolic.eth

@@ -1,0 +1,6 @@
+node_modules
+**/generated.go
+**/generated_test.go
+build
+
+bazel-*
